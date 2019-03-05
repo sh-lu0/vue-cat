@@ -36,14 +36,11 @@ export default {
       if(!text) {
         return
       }
-      this.todos.push({
-        text: text,
-        done: false
-      })
-      this.newTodo = ''
-    },
+      this.todos.push({})
+    }
   }
 }
+method
 </script>
 
 <style lang="scss" scoped>

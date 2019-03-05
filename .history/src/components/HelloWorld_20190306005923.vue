@@ -30,20 +30,8 @@ export default {
       newTodo: ""
     }
   },
-  methods: {
-    addTodo: function(event) {
-      let text = this.newTodo && this.newTodo.trim()
-      if(!text) {
-        return
-      }
-      this.todos.push({
-        text: text,
-        done: false
-      })
-      this.newTodo = ''
-    },
-  }
-}
+},
+method
 </script>
 
 <style lang="scss" scoped>

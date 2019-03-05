@@ -28,20 +28,8 @@ export default {
         {text : 'awesome-vue', done: true },
       ],
       newTodo: ""
-    }
-  },
-  methods: {
-    addTodo: function(event) {
-      let text = this.newTodo && this.newTodo.trim()
-      if(!text) {
-        return
-      }
-      this.todos.push({
-        text: text,
-        done: false
-      })
-      this.newTodo = ''
     },
+    
   }
 }
 </script>

@@ -18,7 +18,7 @@
 <script>
 export default {
   name: 'hello',
-  data: function (){
+  data (){
     return {
       msg: 'Welcome to Your Vue.js App',
       todos : [
@@ -29,19 +29,6 @@ export default {
       ],
       newTodo: ""
     }
-  },
-  methods: {
-    addTodo: function(event) {
-      let text = this.newTodo && this.newTodo.trim()
-      if(!text) {
-        return
-      }
-      this.todos.push({
-        text: text,
-        done: false
-      })
-      this.newTodo = ''
-    },
   }
 }
 </script>

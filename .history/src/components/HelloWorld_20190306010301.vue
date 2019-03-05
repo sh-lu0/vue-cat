@@ -1,4 +1,5 @@
 <template>
+import { SSL_OP_NO_SESSION_RESUMPTION_ON_RENEGOTIATION } from 'constants';
    <div>
      {{ msg }}
     <form>
@@ -34,16 +35,12 @@ export default {
     addTodo: function(event) {
       let text = this.newTodo && this.newTodo.trim()
       if(!text) {
-        return
+        SSL_OP_NO_SESSION_RESUMPTION_ON_RENEGOTIATION
       }
-      this.todos.push({
-        text: text,
-        done: false
-      })
-      this.newTodo = ''
-    },
+    }
   }
 }
+method
 </script>
 
 <style lang="scss" scoped>

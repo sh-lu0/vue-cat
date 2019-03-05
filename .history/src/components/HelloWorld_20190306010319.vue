@@ -37,13 +37,12 @@ export default {
         return
       }
       this.todos.push({
-        text: text,
-        done: false
+        text
       })
-      this.newTodo = ''
-    },
+    }
   }
 }
+method
 </script>
 
 <style lang="scss" scoped>

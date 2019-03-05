@@ -2,10 +2,10 @@
    <div>
      {{ msg }}
     <form>
-      <button v-on:click="addTodo()">Add Task</button>
+      <button>Add Task</button>
       <button>Delete Finished Tasks</button>
-      <p>input: <input type="text" v-model="newTodo"></p>
-      <p>task: {{ newTodo }}</p>
+      <p>input: <input type="text"></p>
+      <p>task: </p>
     </form>
     <div class="task-list">
       <label class="task-list__item" v-for="todo in todos">
@@ -18,30 +18,16 @@
 <script>
 export default {
   name: 'hello',
-  data: function (){
+  data (){
     return {
       msg: 'Welcome to Your Vue.js App',
       todos : [
         {text : 'vue-router', done: false},
         {text : 'vuex', done: false},
         {text : 'vue-loader', done: false},
-        {text : 'awesome-vue', done: true },
-      ],
-      newTodo: ""
+        {text : 'awesome-vue', done: false},
+      ]
     }
-  },
-  methods: {
-    addTodo: function(event) {
-      let text = this.newTodo && this.newTodo.trim()
-      if(!text) {
-        return
-      }
-      this.todos.push({
-        text: text,
-        done: false
-      })
-      this.newTodo = ''
-    },
   }
 }
 </script>

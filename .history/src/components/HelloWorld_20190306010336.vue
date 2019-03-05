@@ -40,10 +40,11 @@ export default {
         text: text,
         done: false
       })
-      this.newTodo = ''
-    },
+      this.
+    }
   }
 }
+method
 </script>
 
 <style lang="scss" scoped>

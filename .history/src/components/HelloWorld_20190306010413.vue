@@ -44,6 +44,7 @@ export default {
     },
   }
 }
+method
 </script>
 
 <style lang="scss" scoped>
