@@ -11,8 +11,7 @@
              v-for="todo in todos">
         <input type="checkbox" v-model="todo.done">
         <input type="checkbox" v-model="todo.editing">
-         <!-- trueだったらtodo.textをバインディングし，keyup.enterイベントでtodo.editingを反転させる -->
-        <input v-if="todo.editing" v-model="todo.text" @keyup.enter="todo.editing = !todo.editing">
+        <input v-if="todo.editing" v-model="todo.text" @keyup.enter="todo.editing = !todo.editing>
         <span v-else>{{ todo.text }}</span>
       </label>
     </div>

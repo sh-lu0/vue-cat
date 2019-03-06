@@ -7,12 +7,29 @@
       <p>task: {{ newTodo }}</p>
     </form>
     <div class="task-list">
+      <label class="task-list__item" v-for="todo in todos">
+        <input type="checkbox" v-model="todo.done">
+        <input type="checkbox" v-model="todo.editing">
+        <input type="checkbox" v-model="todo.editing">
+        <input v-if="todo.editing" v-model="todo.text" @keyup.enter="todo.editing" =! <template>
+  <div>
+    <form>
+      <button @click="addTodo()">ADD TASK</button>
+      <button @click="removeTodo()">DELETE FINISHED TASKS</button>
+      <p>input: <input type="text" v-model="newTodo"></p>
+      <p>task: {{ newTodo }}</p>
+    </form>
+    <div class="task-list">
       <label class="task-list__item"
              v-for="todo in todos">
         <input type="checkbox" v-model="todo.done">
         <input type="checkbox" v-model="todo.editing">
-         <!-- trueだったらtodo.textをバインディングし，keyup.enterイベントでtodo.editingを反転させる -->
         <input v-if="todo.editing" v-model="todo.text" @keyup.enter="todo.editing = !todo.editing">
+        <span v-else>{{ todo.text }}</span>
+      </label>
+    </div>
+  </div>
+</template>todo.editing>
         <span v-else>{{ todo.text }}</span>
       </label>
     </div>
