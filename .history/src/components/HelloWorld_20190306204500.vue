@@ -43,7 +43,7 @@ export default {
     },
     removeTodo: function(event) {
       for(let i = this.todos.length - 1;i>=0;i--){
-        // 破壊的な操作なのでlength→0
+        // 破壊的な操作なのでlength→
         if(this.todos[i].done) this.todos.splice(i,1)
       }
     }
